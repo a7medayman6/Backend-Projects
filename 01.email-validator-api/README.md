@@ -18,5 +18,8 @@ You are tasked with building a simple email validator API. The API should rece
 
 | Endpoint | Method | Request Body | Response Body | Response Status Code | Description |
 | --- | --- | --- | --- | --- | --- |
-| /validate | POST | {"email": "example@example.com"} | {"isValid": true, "domain": "example.com", "path": null} or {"isValid": false, "domain": null, "path": null} | 200 or 400 | Validates the email address and responds with a JSON object containing details about the email address. |
+| /validate | POST | {"email": "username@sub.domain.tld"} | ```{ "isValid": true, "message": "Email is valid", "email": "username@sub.domain.tld", "username": "username", "subdomain": "sub", "domain": "domain", "tld": "tld" }``` Or ```{ "isValid": true, "message": "Email is invalid", "email": "wrong.domain.tld", "username": null, "subdomain": null, "domain": null, "tld": null }``` | `200` or `400` | Validates the email address and responds with a JSON object containing details about the email address. | 
+
+
+
 

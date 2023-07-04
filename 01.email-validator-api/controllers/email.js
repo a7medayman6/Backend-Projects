@@ -16,7 +16,7 @@ const validateEmail = async (req, res) =>
     if (!emailRegex.test(email))
     {
         Logger.error(filename, 'Email is invalid');
-        return res.status(400).json({ isValid: true, message: 'Email is invalid' });
+        return res.status(400).json({ isValid: true, message: 'Email is invalid', email: email, username: null, subdomain: null, domain: null, tld: null });
     }
 
     Logger.log(filename, 'Email is valid');
