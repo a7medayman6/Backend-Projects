@@ -22,7 +22,7 @@ app.use(morgan('dev'));
 const apiBaseUrl = '/api/v1';
 
 // api routes
-app.use(`${apiBaseUrl}/email`, require('./routes/email'));
+app.use(`${apiBaseUrl}/validate`, require('./routes/email'));
 
 // start the server
 app.listen(PORT, () => 

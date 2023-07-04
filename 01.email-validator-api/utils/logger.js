@@ -2,7 +2,7 @@ function Logging(filename, message, error = false)
 {
     const date = new Date();
     const timestamp = date.toLocaleDateString() + ' ' + date.toLocaleTimeString();
-    const logLevel = error ? '[ERROR' : '[LOG';
+    const logLevel = error ? '[ERROR' : '[INFO';
     console.log(`${logLevel} | ${filename} | ${timestamp} ] ${message}`);
 };
 
